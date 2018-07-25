@@ -9,6 +9,13 @@ import os
 from discord import opus
 from asyncio import sleep
 
+
+
+
+
+
+
+
 bot = commands.Bot(command_prefix='d!')
 logging.basicConfig(level='INFO')
 bot.remove_command('help')
