@@ -269,7 +269,7 @@ async def help(ctx):
     em.add_field(name='★Info★', value='`about, avatar, report, userinfo`', inline=False)
     em.add_field(name='★Fun★', value='`kill, 8ball, choose`', inline=False)
     em.add_field(name='★Suplimentare★', value='`welcome, goodbye`', inline=False)
-    em.add_field(name='★Musica★', value='`play, stop, resume, pause, stop, playing`', inline=False)
+    em.add_field(name='★Musica★', value='`play, stop, resume, pause, next, playing`', inline=False)
     em.set_footer(text='✰Foloseste `d!` inainte de comanda✰')
     em.set_thumbnail(url=ctx.me.avatar_url)
     await ctx.send(embed=em)
