@@ -13,7 +13,7 @@ bot = commands.Bot(command_prefix='d!')
 logging.basicConfig(level='INFO')
 bot.remove_command('help')
 bot.load_extension('admin')
-bot.load_extension('music.py')
+bot.load_extension('music')
 colors = [discord.Colour.purple(), discord.Colour.blue(), discord.Colour.red(), discord.Colour.green(), discord.Colour.orange()]
 admin1 = [404708655578218511]
 admin2 = [390540063609454593]
