@@ -25,6 +25,8 @@ colors = [discord.Colour.purple(), discord.Colour.blue(), discord.Colour.red(), 
 admin1 = [404708655578218511]
 admin2 = [390540063609454593]
 gid = [464783042310045707]
+OPUS_LIBS = ['libopus-0.x86.dll', 'libopus-0.x64.dll', 'libopus-0.dll', 'libopus.so.0', 'libopus.0.dylib']
+
 def load_opus_lib(opus_libs=OPUS_LIBS):
     if opus.is_loaded():
         return True
