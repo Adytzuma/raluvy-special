@@ -12,7 +12,8 @@ from asyncio import sleep
 bot = commands.Bot(command_prefix='d!')
 logging.basicConfig(level='INFO')
 bot.remove_command('help')
-bot.load_extension('admin')
+bot.load_extension('admin.py')
+bot.load_extension('music.py')
 colors = [discord.Colour.purple(), discord.Colour.blue(), discord.Colour.red(), discord.Colour.green(), discord.Colour.orange()]
 admin1 = [404708655578218511]
 admin2 = [390540063609454593]
@@ -234,33 +235,7 @@ async def on_message(message):
 
 
 
-"""
-@bot.listen()
-async def on_member_join(member):
-    if member.guild.id == 461953532019605504:      
-        e = discord.Embed(color=discord.Colour.blue())
-        e.add_field(name=':tada: Welcome!', value=member.mention, inline=False)
-        e.add_field(name=':tools: Info:', value=f'Bine ai venit pe {member.guild.name}! Nu uita sa citesti <#461959981936148511>. Speram sa te distrezi alaturi de noi! Acum suntem {member.guild.member_count}', inline=False)
-        e.set_thumbnail(url=member.avatar_url)
-        await bot.get_guild(461953532019605504).get_channel(470916620332695562).send(embed=e)
-    if member.guild.id != 461953532019605504:
-        return
 
-    
-
-
-
-@bot.listen()
-async def on_member_remove(member):
-    if member.guild.id == 461953532019605504:      
-        e = discord.Embed(color=discord.Colour.blue())
-        e.add_field(name=':sob: Goodbye!', value=member.mention, inline=False)
-        e.add_field(name=':tools: Info:', value=f'Speram sa te mai intorci pe la noi ... Esti mereu bine venit ! Acum Suntem {member.guild.member_count} :sob: :pensive:', inline=False)
-        e.set_thumbnail(url=member.avatar_url)
-        await bot.get_guild(461953532019605504).get_channel(470916620332695562).send(embed=e)
-    if member.guild.id != 461953532019605504:
-        return
-"""
   
 @bot.command()
 async def lenny(ctx):
@@ -314,4 +289,4 @@ async def purge(ctx, number : int):
 
 
 
-bot.run('NDcwNTY1ODAwNDk2MDcwNjU2.Djcl5w.zJPGdGJoVlMH389DGCnSoQi_tto')
+bot.run(os.getenv("TOKEN"))
