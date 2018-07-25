@@ -84,7 +84,7 @@ async def report(ctx, *, problema=None):
 @bot.command(aliases =['Kick', 'KICK'])
 @commands.has_permissions(kick_members=True)
 async def kick(ctx, member: discord.Member=None):
-    """da kick la prosti"""
+    """Dai kick cuiva"""
     if member is ctx.author:
         return await ctx.send('Nu iti poti da kick singur!')
     if member is ctx.message.guild.owner:
@@ -250,7 +250,7 @@ async def help(ctx):
     em.add_field(name='★Info★', value='`about, avatar, report, userinfo`', inline=False)
     em.add_field(name='★Fun★', value='`kill, 8ball, choose`', inline=False)
     em.add_field(name='★Suplimentare★', value='`welcome, goodbye`', inline=False)
-    em.add_field(name='★Musica★', value='`play, stop, resume, pause, stop, playing` (coming soon)', inline=False)
+    em.add_field(name='★Musica★', value='`play, stop, resume, pause, stop, playing`', inline=False)
     em.set_footer(text='✰Foloseste `d!` inainte de comanda✰')
     em.set_thumbnail(url=ctx.me.avatar_url)
     await ctx.send(embed=em)
