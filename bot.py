@@ -201,15 +201,23 @@ async def goodbye(ctx):
 
 @bot.listen()
 async def on_member_join(member):
+    membru = discord.utils.get(member.guild.roles, name='Member')
+    prot = discord.utils.get(member.guild.roles, name='PROTECTION+')
+    bot = discord.utils.get(member.guild.roles, name='Bots')
+    if member.guild.id != 464783042310045707:
+        return
+    if member.bot is True and member.guild.id == 464783042310045707:
+        await member.add_roles(prot)
+        await member.add_roles(bot)
+    if member.bot is False and member.guild.id == 464783042310045707:
+        await member.add_roles(prot)
+        await member.add_roles(membru)
     if member.guild.id == 464783042310045707:        
         em = discord.Embed(color=random.choice(colors))
         em.add_field(name=':tada: Welcome:', value=member.mention, inline=False)
         em.add_field(name=':tools: Info:', value='Nu uita sa citesti <#464789280368230400>, citeste <#466924639797641216> pentru mai multe informatii. Daca aveti o problema la server-ul nostru, contacti un membru staff! ENJOY', inline=False)
         em.set_thumbnail(url=member.avatar_url)
         await bot.get_channel(464783042310045709).send(embed=em)
-    if member.guild.id != 464783042310045707:
-        return
-   
         
 
     
