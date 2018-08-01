@@ -231,7 +231,7 @@ async def on_member_join(member):
 @bot.command()
 async def about(ctx):
     em = discord.Embed(color=random.choice(colors))
-    em.add_field(name=':crown: Owner', value='<@390540063609454593>', inline=True)
+    em.add_field(name=':crown: Owner', value='<@414094066339414019>', inline=True)
     em.add_field(name=':family_mwgb: Servers', value=f'{len(bot.guilds)}', inline=True)
     em.add_field(name=':bust_in_silhouette: Members', value=f'{len(bot.users)}', inline=True)
     em.add_field(name=':page_facing_up: Library', value='discord.py')
