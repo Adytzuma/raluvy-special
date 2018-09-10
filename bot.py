@@ -47,10 +47,7 @@ async def on_message(message):
         em.add_field(name=message.guild.owner.name + ' is away', value='Stop pinging me')
         await message.channel.send(embed=em)
 
-        
-@bot.check
-async def danicro(ctx):
-    return not ctx.author.id == 160068544409763840
+
 @commands.cooldown(1, 5, commands.BucketType.user)
 @bot.command(name='8ball')
 async def l8ball(ctx, question=None):
